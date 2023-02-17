@@ -1,1 +1,18 @@
-<p>welcome works!</p>
+<div class="container mt-3 custom-centered">
+    <h2>Form</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="startRegistration()" >
+        <div class="mb-3 mt-3">
+            <label for="name">name:</label>
+            <input type="text" class="form-control" formControlName="name" name="name" id="name" placeholder="Enter Name" >
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" formControlName="email" name="email" id="email" placeholder="Enter email" >
+        </div>
+        <div class="mb-3">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Enter password" >
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+</div>

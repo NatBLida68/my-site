@@ -23,3 +23,25 @@
     background-color: #04AA6D;
     color: white;
 }
+
+.site-footer
+{
+    background-color:transparent;
+    color:#737373;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.site-footer a
+{
+    color:#737373;
+}
+
+
+.copyright-text
+{
+    margin:0
+}

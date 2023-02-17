@@ -3,10 +3,9 @@ body {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     height: 100vh;
     overflow: hidden;
-    font-family: "Anton", sans-serif;
+    font-family: cursive;
     justify-content: center;
     align-items: center;
-
 
 }
 
@@ -332,3 +331,5 @@ body {
         transform: rotate(405deg);
     }
 }/* You can add global styles to this file, and also import other style files */
+
+h1,h2,h3,h4,h5,h6 {color: white}

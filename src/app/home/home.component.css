@@ -1,0 +1,9 @@
+.centre {font-family: monospace;
+        font-size: 150px;
+        background: transparent;
+        position: absolute;
+        padding-left: 25%;
+        padding-top: 15%;
+        z-index: 1;
+
+}
