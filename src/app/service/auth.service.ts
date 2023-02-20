@@ -12,9 +12,9 @@ export class AuthService {
   {
   return this.http.get(this.url);
   }
-  getByCode(code:any)
+  getByCode(name:any,password:any)
   {
-    return this.http.get(this.url+'/'+code);
+    return this.http.get(this.url+'?name='+name+"&password="+password);
   }
   startRegistration(inputData:any)
   {
@@ -23,5 +23,13 @@ export class AuthService {
   updateData(code:any,inputData:any)
   {
     return this.http.post(this.url+'/'+code,inputData);
+  }
+  islogged()
+  {
+    return sessionStorage.getItem('username')!=null;
+  }
+  setLogin(name:any)
+  {
+    sessionStorage.setItem('username',name);
   }
 }

@@ -1,0 +1,70 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem; background-color: transparent">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-5 d-none d-md-block">
+                            <div class="sea">
+                                <div class="circle-wrapper">
+                                    <div class="bubble"></div>
+                                    <div class="submarine-wrapper">
+                                        <div class="submarine-body">
+                                            <div class="window"></div>
+                                            <div class="engine"></div>
+                                            <div class="light"></div>
+                                        </div>
+                                        <div class="helix"></div>
+                                        <div class="hat">
+                                            <div class="leds-wrapper">
+                                                <div class="periscope"></div>
+                                                <div class="leds"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 ">
+
+                                <form [formGroup]="loginForm" (ngSubmit)="verifyLog()" >
+
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                        <i class="fas fa-cubes fa-2x me-3"></i>
+                                        <span class="h1 fw-bold mb-0 text-white">Hello {{name}}</span> <!-- dynamic text  -->
+                                    </div>
+
+                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+<!--
+                                    <div class="form-outline mb-4">
+                                        <input type="text" name="name" id="name" [(ngModel)]="name" class="form-control form-control-lg">  &lt;!&ndash; 2 way binding def &ndash;&gt;
+                                        <label class="form-label" for="name">User Name</label>
+                                    </div>-->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" formControlName="name" name="name" id="name" class="form-control form-control-lg">  <!-- 2 way binding def -->
+                                        <label class="form-label" for="name">User Name</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" formControlName="password" id="password" class="form-control form-control-lg" />
+                                        <label class="form-label" for="password">Password</label>
+                                    </div>
+
+                                    <div class="pt-1 mb-4">
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                                    </div>
+
+                                    <a class="small text-muted" href="#!">Forgot password?</a>
+                                    <p class="mb-5 pb-lg-2">Don't have an account? <a href="/welcome"
+                                                                                                              style="color: white;">Register here</a></p>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -6,6 +6,7 @@ import * as $ from 'jquery'; //import jquery
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  pageName = "HOME PAGE";
   public ngOnInit() //init function after angular loads auto-invoke
   {
     $(function () {   //using jquery

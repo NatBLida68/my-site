@@ -21,7 +21,7 @@ export class WelcomeComponent {
     password:this.builder.control('',Validators.required),
   });
   startRegistration()
-  {console.log(this.registerForm.valid);
+  {
     if(this.registerForm.valid)
     {
 
