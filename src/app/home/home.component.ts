@@ -9,12 +9,7 @@ export class HomeComponent {
   pageName = "HOME PAGE";
   public ngOnInit() //init function after angular loads auto-invoke
   {
-    $(function () {   //using jquery
-      $(".nvLinks").on('click',function () {
-        //window.location.href = '/home';
-      })
-    })
-    
+
   }
 
 }

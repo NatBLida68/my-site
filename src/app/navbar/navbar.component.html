@@ -1,0 +1,4 @@
+<div class="topnav" *ngIf="show" >
+    <a *ngFor="let item of navitems"  routerLink="/{{item}}">{{item | titlecase}}</a>
+    <a  routerLink="/login" >{{logged?"Logout":"Login"}}</a>
+</div>
