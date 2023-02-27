@@ -23,17 +23,17 @@ export class WelcomeComponent {
   startRegistration()
   {
     if(this.registerForm.valid)
-    {
+{
 
-      this.service.startRegistration(this.registerForm.value).subscribe(res =>{
-      this.toaster.success("success");
-      this.route.navigate(['home']);
-    });
-    }
-    else{
-    this.toaster.warning("Please enter the valid data!");
-      this.route.navigate(['home']);
-    }
-  }
+  this.service.startRegistration(this.registerForm.value).subscribe(res =>{
+  this.toaster.success("success");
+  this.route.navigate(['home']);
+});
+}
+else{
+  this.toaster.warning("Please enter the valid data!");
+  this.route.navigate(['home']);
+}
+}
 
 }

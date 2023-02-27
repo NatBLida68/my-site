@@ -14,6 +14,7 @@ export class NavbarComponent {
   logged = this.service.islogged();
   navitems=this.navdata();
   show=true;
+  admin=this.service.isAdmin();
 navdata()
 {
   return (this.logged)?['home']:['home','register'];

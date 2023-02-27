@@ -7,7 +7,7 @@ import {HttpClient} from "@angular/common/http";
 export class AuthService {
 
   constructor(private http:HttpClient) { }
-  url=' http://localhost:3000/user';
+  url='http://localhost:3000/user';
   getAll()
   {
   return this.http.get(this.url);
@@ -20,16 +20,24 @@ export class AuthService {
   {
     return this.http.post(this.url,inputData);
   }
-  updateData(code:any,inputData:any)
+  updateData(id:any,inputData:any)
   {
-    return this.http.post(this.url+'/'+code,inputData);
+    return this.http.patch(this.url+'/'+id,inputData);
   }
   islogged()
   {
     return sessionStorage.getItem('username')!=null;
   }
+  isAdmin()
+  {
+    return sessionStorage.getItem('username')=="admin";
+  }
   setLogin(name:any)
   {
     sessionStorage.setItem('username',name);
+  }
+  getById(id:number)
+  {
+    return this.http.get(this.url+'?id='+id);
   }
 }

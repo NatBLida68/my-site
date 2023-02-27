@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid ">
+
+<table class="table table-bordered pagination-lg">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">email</th>
+        <th scope="col">name</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let user of users">
+    <tr>
+        <td scope="row">{{user.id}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.name}}</td>
+        <td><button class="btn btn-primary" (click)="openPopup(user.id)" >Edit</button></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div
+        class="modal"
+        tabindex="-1"
+        role="dialog"
+        [ngStyle]="{'display':displayStyle}" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: #1b2735" >
+            <div class="modal-header">
+                <h4 class="modal-title text-white">Update User</h4>
+            </div>
+            <div class="modal-body">
+                <form  [formGroup]="updateForm" >
+                    <div class="mb-3 mt-3">
+                        <label for="name">name:</label>
+                        <input type="text" class="form-control" formControlName="name" name="name" id="name" value="{{selected?selected[0].name:'name'}}" >
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" formControlName="email" name="email" id="email" value="{{selected?selected[0].email:'email'}}" >
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        (click)="closePopup()">
+                    Close
+                </button>
+                <button type="submit" class="btn btn-primary" (click)="updateUser()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

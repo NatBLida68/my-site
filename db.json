@@ -2,15 +2,20 @@
   "user": [
     {
       "name": "aswajith",
-      "email": "aswajith.jithu888@gmail.com",
-      "password": "12345",
+      "email": "aswajith1o.jithu888@gmail.com",
       "id": 1
     },
     {
       "name": "abc",
-      "email": "abc@gmail.com",
+      "email": "abc1@gmail.com",
       "password": "abcabc",
       "id": 2
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 3
     }
   ]
 }
