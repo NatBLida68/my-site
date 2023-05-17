@@ -32,7 +32,7 @@ export class WelcomeComponent {
 }
 else{
   this.toaster.warning("Please enter the valid data!");
-  this.route.navigate(['home']);
+ /* this.route.navigate(['home']);*/
 }
 }
 
