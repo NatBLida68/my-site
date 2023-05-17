@@ -7,7 +7,7 @@
     },
     {
       "name": "abc",
-      "email": "abc1@gmail.com",
+      "email": "abc@gmail.com",
       "password": "abcabc",
       "id": 2
     },
@@ -16,6 +16,12 @@
       "email": "admin@gmail.com",
       "password": "admin",
       "id": 3
+    },
+    {
+      "name": "xdsvd",
+      "email": "test@gmail.com",
+      "password": "pRUDRz5ZSfFhVmc",
+      "id": 4
     }
   ]
 }
